@@ -16,6 +16,7 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__PARALLELISM: "8"
     AIRFLOW_CONN_WAREHOUSE: postgresql://etl:etl@warehouse:5432/warehouse
     AIRFLOW_CONN_SOURCE_API: '{"conn_type": "http", "host": "http://source-api:8000"}'
+    HOME: /home/airflow
   volumes:
     - ./dags:/opt/airflow/dags
     - ./include:/opt/airflow/include
